@@ -26,13 +26,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 
   <!-- Favicon & Social Icons -->
-  <link rel="icon" type="image/png" href="{{ site.baseurl }}/Icon.png">
-  <link rel="apple-touch-icon" href="{{ site.baseurl }}/Icon.png">
-  <meta property="og:image" content="{{ site.url }}{{ site.baseurl }}/Icon.png">
-  <meta property="twitter:image" content="{{ site.url }}{{ site.baseurl }}/Icon.png">
+  <link rel="icon" type="image/png" href="{{ '/Icon.png' | relative_url }}">
+  <link rel="apple-touch-icon" href="{{ '/Icon.png' | relative_url }}">
+  <meta property="og:image" content="{{ site.url }}{{ '/Icon.png' | relative_url }}">
+  <meta property="twitter:image" content="{{ site.url }}{{ '/Icon.png' | relative_url }}">
 </head>
 <body class="theme-dark">
   {% include navbar.html %}
@@ -43,6 +43,6 @@
 
   {% include footer.html %}
 
-  <script src="{{ site.baseurl }}/assets/js/main.js"></script>
+  <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
 </body>
 </html>
