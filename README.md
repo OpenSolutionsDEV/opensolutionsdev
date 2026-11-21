@@ -3,7 +3,7 @@
 This repository powers the official website and documentation for **SnapVault**, hosted via **GitHub Pages** using the **Jekyll** engine at:
 👉 **[https://opensolutionsdev.github.io](https://opensolutionsdev.github.io)**
 
-> **Note on Licensing:** This repository contains the source code for the public website. The **SnapVault Android mobile application** itself is proprietary software developed by Open Solutions Dev. All rights reserved.
+> **Note on Licensing:** This repository contains the source code for the public website. The **SnapVault Android mobile application** itself is proprietary software developed by Open Solutions. All rights reserved.
 
 ---
 
