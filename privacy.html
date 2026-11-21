@@ -1,0 +1,125 @@
+---
+layout: default
+title: Privacy Policy — SnapVault
+description: Official Privacy Policy for SnapVault Android application. 100% on-device AI, zero cloud tracking, zero remote servers.
+---
+
+<div class="legal-page-header">
+  <div class="container">
+    <div style="display: flex; align-items: center; justify-content: center; gap: 1rem; margin-bottom: 1rem;">
+      <img src="{{ site.baseurl }}/Icon.png" alt="SnapVault Logo" width="56" height="56" style="border-radius: 14px; box-shadow: 0 4px 15px rgba(0,0,0,0.4);">
+      <h1 style="font-size: 2.2rem; margin: 0;">Privacy Policy</h1>
+    </div>
+    <p style="color: var(--text-muted); font-size: 0.95rem;">
+      <strong>Effective Date:</strong> November 21, 2026 • <strong>Last Updated:</strong> November 21, 2026
+    </p>
+  </div>
+</div>
+
+<div class="container">
+  <div class="legal-content">
+    <div class="privacy-pledge-box" style="margin: 0 0 3rem 0; text-align: left; padding: 2rem;">
+      <h3 style="color: #34d399; margin-bottom: 0.5rem; font-size: 1.3rem;">🛡️ Summary of Our Core Privacy Pledge</h3>
+      <p style="font-size: 0.95rem; margin-bottom: 0;">
+        Welcome to <strong>SnapVault</strong>. SnapVault is engineered from the ground up as a <strong>100% Local-First Application</strong>. We firmly believe that your personal screenshots, financial receipts, documents, messages, and private photos belong solely to you. <strong>Zero data ever leaves your phone.</strong>
+      </p>
+    </div>
+
+    <p>
+      This Privacy Policy explains how SnapVault ("we," "us," "our," or the "Application") handles information when you use our mobile application on Android devices. By installing, accessing, or using SnapVault, you agree to the practices described in this Policy. If you do not agree with any part of this Policy, please do not use the Application.
+    </p>
+
+    <h2>1. Our Core Privacy Philosophy: 100% Local-First</h2>
+    <p>Unlike traditional cloud-based organizers and gallery apps:</p>
+    <ul>
+      <li><strong>No Cloud Uploads:</strong> Your screenshots, extracted text, expense figures, and custom collection groupings are never uploaded to, stored on, or processed by external servers or cloud services.</li>
+      <li><strong>No Server Account Required:</strong> You can use all core features of SnapVault completely offline without creating an account or providing an email address.</li>
+      <li><strong>On-Device Artificial Intelligence:</strong> All image classification, text recognition, currency parsing, and search indexing occur purely within your device's local memory using lightweight on-device AI models.</li>
+    </ul>
+
+    <h2>2. Information We Handle & How It Is Used</h2>
+    <p>
+      Because SnapVault operates locally on your device, we do not collect, harvest, or transmit your personal data. Below is a detailed breakdown of how the Application handles data locally on your device:
+    </p>
+
+    <h3>A. Screenshots & Image Files</h3>
+    <ul>
+      <li><strong>Local Access Only:</strong> SnapVault accesses image files stored in your phone's MediaStore (<code>Pictures/Screenshots</code> or user-selected media directories) to display, search, crop, redact, stitch, and organize your screenshots inside the app.</li>
+      <li><strong>No Image Transmission:</strong> Your raw or edited image files are never transmitted across the network.</li>
+    </ul>
+
+    <h3>B. Extracted Text & Search Index</h3>
+    <ul>
+      <li><strong>Local On-Device AI:</strong> SnapVault utilizes local on-device machine vision intelligence to extract readable text from your screenshots (such as receipt amounts, order IDs, phone numbers, messages, and dates).</li>
+      <li><strong>Local Database Storage:</strong> The extracted text and search indexes are saved exclusively in a local SQLite database (<code>Room</code>) stored inside SnapVault's protected private app storage on your device.</li>
+    </ul>
+
+    <h3>C. Financial & Expense Analytics</h3>
+    <ul>
+      <li><strong>Local Processing:</strong> Receipt amounts, transaction dates, and spend totals are parsed in local memory and displayed in your personal expense summary.</li>
+      <li><strong>Local Export:</strong> When you export a PDF or CSV expense report, the document is generated locally on your device and saved directly to your local file storage or shared via your chosen system app.</li>
+    </ul>
+
+    <h3>D. Locked Collections & Encryption</h3>
+    <ul>
+      <li><strong>AES-256 Encryption:</strong> When you lock a custom collection, SnapVault encrypts the image files using Advanced Encryption Standard in Galois/Counter Mode (AES-256-GCM) with Android MasterKey cryptography and moves them to internal private storage (<code>context.filesDir/locked_vault/</code>).</li>
+      <li><strong>Biometric Verification:</strong> Authentication for locked collections is handled entirely through the Android OS system <code>BiometricPrompt</code> API. SnapVault never sees, stores, or accesses your actual fingerprint, face data, or device PIN/pattern.</li>
+    </ul>
+
+    <h2>3. Android Device Permissions & Usage</h2>
+    <p>SnapVault requests specific system permissions to function effectively. Each permission is used strictly for its declared local purpose:</p>
+    <ol>
+      <li><strong>Storage & Media Permissions (<code>READ_MEDIA_IMAGES</code> / <code>READ_EXTERNAL_STORAGE</code>):</strong> Required to scan, index, display, and organize screenshots stored on your device's storage.</li>
+      <li><strong>Foreground Service & Accessibility (<code>FOREGROUND_SERVICE</code> / <code>BIND_ACCESSIBILITY_SERVICE</code>):</strong> Used optionally by the background Capture Engine to take quick screenshots on your demand when you tap the floating shutter button or notification action. It does <strong>not</strong> monitor, record, or read your active screen content.</li>
+      <li><strong>Display Over Other Apps (<code>SYSTEM_ALERT_WINDOW</code>):</strong> Required to draw the optional floating screenshot shutter button over other applications.</li>
+      <li><strong>Biometric Permission (<code>USE_BIOMETRIC</code> / <code>USE_FINGERPRINT</code>):</strong> Used to prompt Android's system biometric dialog when you unlock or manage a locked collection.</li>
+      <li><strong>Post Notifications (<code>POST_NOTIFICATIONS</code>):</strong> Used to show the active status of the screenshot capture service and notification shutter triggers.</li>
+      <li><strong>Vibration & Sound (<code>VIBRATE</code>):</strong> Provides haptic feedback and optional shutter sound upon capturing or editing screenshots.</li>
+      <li><strong>Internet Access (<code>INTERNET</code>):</strong> Used strictly by Google Play Services (Google Play Billing for Pro subscriptions and Google Mobile Ads for non-Pro users). The Application's core indexing, search, and storage engines do <strong>not</strong> use network connections.</li>
+    </ol>
+
+    <h2>4. Third-Party Services & Libraries</h2>
+    <p>
+      SnapVault integrates a minimal set of trusted Google SDKs for monetization and subscription management. These third-party services may collect standard technical identifiers (such as IP addresses, device identifiers, or Android Advertising ID) in accordance with their respective privacy policies:
+    </p>
+    <ul>
+      <li><strong>Google Play Billing Library:</strong> Manages secure in-app purchases and Pro subscription transactions. See <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Play Services Privacy Policy</a>.</li>
+      <li><strong>Google Mobile Ads (AdMob):</strong> Serves optional non-intrusive banner ads or rewarded video ads for non-Pro users. See <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">Google AdMob Privacy Policy</a>.</li>
+      <li><strong>Google Sign-In / Credential Manager (Optional):</strong> Allows users to optionally link their Google Account to attach their SnapVault Pro subscription for seamless purchase restoration across devices. See <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Identity Services</a>.</li>
+    </ul>
+
+    <h2>5. Disclaimer of Warranties & Limitation of Liability</h2>
+    <p>
+      SnapVault is provided on an "AS IS" and "AS AVAILABLE" basis without warranties of any kind. SnapVault and its developers shall not be held liable for any unexpected data loss, file corruption, or device issues resulting from hardware failure, operating system errors, or loss of device encryption credentials. For complete legal terms, please review our <a href="{{ site.baseurl }}/terms">Terms of Service</a>.
+    </p>
+
+    <h2>6. Children's Privacy</h2>
+    <p>
+      SnapVault does not knowingly collect, request, or solicit personal information from children under the age of 13. The Application is a general-purpose productivity utility. If a parent or guardian becomes aware that their child has provided personal information via third-party services integrated into the app, please contact us immediately, and we will take steps to assist.
+    </p>
+
+    <h2>7. User Data Control, Retention & App Uninstallation</h2>
+    <p>You maintain complete ownership and control over all data handled by SnapVault:</p>
+    <ul>
+      <li><strong>Deleting Content:</strong> Deleting a screenshot inside SnapVault removes the corresponding record from the local database. Permanently deleting an encrypted file inside a locked collection removes the encrypted <code>.enc</code> file from your device's internal storage.</li>
+      <li><strong>Uninstallation:</strong> Uninstalling SnapVault from your Android device immediately and permanently deletes the local SQLite database, local preferences, and all AES-256 encrypted files stored inside internal app storage (<code>context.filesDir/locked_vault/</code>).</li>
+      <li><strong>Data Portability:</strong> You can export your expense data as CSV/PDF files or restore encrypted files to public storage at any time prior to uninstallation.</li>
+    </ul>
+
+    <h2>8. Changes to This Privacy Policy</h2>
+    <p>
+      We may update our Privacy Policy from time to time to reflect changes in app features, legal requirements, or system guidelines. Any updates will be posted on this page with an updated "Last Updated" date. We encourage you to review this Policy periodically.
+    </p>
+
+    <h2>9. Contact Us</h2>
+    <p>
+      If you have any questions, concerns, or feedback regarding this Privacy Policy or SnapVault's local privacy practices, please contact us at:
+    </p>
+    <p>
+      <strong>Open Solutions Dev</strong><br>
+      Email: <a href="mailto:support@opensolutionsdev.com">support@opensolutionsdev.com</a><br>
+      Application: SnapVault for Android<br>
+      Website: <a href="https://opensolutionsdev.github.io">https://opensolutionsdev.github.io</a>
+    </p>
+  </div>
+</div>

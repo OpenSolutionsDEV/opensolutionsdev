@@ -1,0 +1,31 @@
+# Site settings
+title: SnapVault
+tagline: Screenshot Vault & Smart Organizer
+description: Privacy-first Android app that transforms your messy screenshot gallery into an organized, searchable, and secure personal vault. Powered by on-device intelligence with zero cloud tracking.
+url: "https://opensolutionsdev.github.io"
+baseurl: "" # Empty for root domain opensolutionsdev.github.io
+
+# Author & Organization
+author:
+  name: Open Solutions Dev
+  github: opensolutionsdev
+  email: support@opensolutionsdev.com
+
+# Build settings
+markdown: kramdown
+permalink: /:title/
+
+# GitHub Pages metadata
+github_username: opensolutionsdev
+repository: opensolutionsdev/opensolutionsdev.github.io
+
+# Exclude from processing
+exclude:
+  - "*.artifact.md"
+  - snapvault_features_overview.artifact.md
+  - snapvault_privacy_policy.artifact.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor/
+  - .git/
+  - .github/

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <title>{% if page.title %}{% if page.title contains site.title %}{{ page.title }}{% else %}{{ page.title }} | {{ site.title }}{% endif %}{% else %}{{ site.title }} — {{ site.tagline }}{% endif %}</title>
+  <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+  <meta property="og:title" content="{% if page.title %}{% if page.title contains site.title %}{{ page.title }}{% else %}{{ page.title }} | {{ site.title }}{% endif %}{% else %}{{ site.title }} — {{ site.tagline }}{% endif %}">
+  <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="{{ site.url }}{{ page.url }}">
+  <meta property="twitter:title" content="{% if page.title %}{% if page.title contains site.title %}{{ page.title }}{% else %}{{ page.title }} | {{ site.title }}{% endif %}{% else %}{{ site.title }} — {{ site.tagline }}{% endif %}">
+  <meta property="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css">
+
+  <!-- Favicon & Social Icons -->
+  <link rel="icon" type="image/png" href="{{ site.baseurl }}/Icon.png">
+  <link rel="apple-touch-icon" href="{{ site.baseurl }}/Icon.png">
+  <meta property="og:image" content="{{ site.url }}{{ site.baseurl }}/Icon.png">
+  <meta property="twitter:image" content="{{ site.url }}{{ site.baseurl }}/Icon.png">
+</head>
+<body class="theme-dark">
+  {% include navbar.html %}
+
+  <main class="site-main">
+    {{ content }}
+  </main>
+
+  {% include footer.html %}
+
+  <script src="{{ site.baseurl }}/assets/js/main.js"></script>
+</body>
+</html>
