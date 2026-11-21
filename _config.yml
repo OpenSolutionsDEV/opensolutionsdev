@@ -17,7 +17,7 @@ permalink: /:title/
 
 # GitHub Pages metadata
 github_username: opensolutionsdev
-repository: opensolutionsdev/opensolutionsdev.github.io
+repository: opensolutionsdev/opensolutionsdev
 
 # Exclude from processing
 exclude:
